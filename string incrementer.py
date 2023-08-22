@@ -6,7 +6,7 @@ def increment_string(strng):
     if strng=='':#jeżeli pusty string dodaj '1'
         return '1'
     elif strng[-1] in '0123456789':
-        while True:#pętla wyszukująca liczb od końca
+        for i in strng:
             if strng[x] in '0123456789':
                 y.append(strng[x])
                 x-=1
@@ -16,7 +16,6 @@ def increment_string(strng):
         y.reverse()#ułożenie liczb w odpowiedniej kolejności
         for i in y:#połączenie listy w liczbę
             z+=i
-        print(z)
         z=str(int(z)+1)#zwiększenie liczby o 1
         while True:#uzupełnienie liczby '0'
             if len(y)==len(z):
@@ -28,9 +27,3 @@ def increment_string(strng):
         return strng+ z
     elif strng[-1] not in '0123456789':#jeżeli na końcu stringa nie ma cyfry dodaje 1
         return strng+ '1'
-    
-    
-        
-            
-            
-    
